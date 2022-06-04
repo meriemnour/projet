@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.AdminPanelController">
+   <tabs>
+      <Tab text="Add Menu">
+         <content>
+            <AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="986.0" style="-fx-background-color: #29c292;">
+               <children>
+                  <Label layoutX="394.0" layoutY="23.0" prefHeight="40.0" prefWidth="129.0" text="Admin" textFill="#fffdfd">
+                     <font>
+                        <Font name="SansSerif Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="522.0" layoutY="438.0" onAction="#TakeOrderScreen" prefHeight="83.0" prefWidth="227.0" style="-fx-background-color: #f95539; -fx-background-radius: 34;" text="VIew Orders" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Regular" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <AnchorPane layoutX="46.0" layoutY="83.0" prefHeight="438.0" prefWidth="413.0" style="-fx-background-color: white; -fx-background-radius: 89;">
+                     <children>
+                        <JFXTextField fx:id="lastNametxt" focusColor="#ffc656" labelFloat="true" layoutX="86.0" layoutY="194.0" prefHeight="25.0" prefWidth="213.0" promptText="Menu Price" />
+                        <JFXTextField fx:id="firstNametxt" focusColor="#ffc656" labelFloat="true" layoutX="86.0" layoutY="131.0" prefHeight="25.0" prefWidth="213.0" promptText="Menu Name" />
+                        <JFXButton buttonType="RAISED" layoutX="70.0" layoutY="290.0" onAction="#AddEmployee" prefHeight="38.0" prefWidth="273.0" style="-fx-background-color: #f95539;" text="ADD MENU" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="109.0" layoutY="37.0" prefHeight="54.0" prefWidth="196.0" text="ADD Menu">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton buttonType="RAISED" cancelButton="true" layoutX="747.0" layoutY="25.0" onAction="#exitScreen" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: red; -fx-background-radius: 150;" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="304.0" fitWidth="334.0" layoutX="483.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/utensils-clipart-head-chef-9.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Modify Menu">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #29c292;">
+               <children>
+                  <AnchorPane layoutX="71.0" layoutY="89.0" prefHeight="438.0" prefWidth="413.0" style="-fx-background-color: white; -fx-background-radius: 89;">
+                     <children>
+                        <JFXTextField fx:id="lastNametxt1" focusColor="#ffc656" labelFloat="true" layoutX="86.0" layoutY="194.0" prefHeight="25.0" prefWidth="213.0" promptText="Menu Price" />
+                        <JFXTextField fx:id="firstNametxt1" focusColor="#ffc656" labelFloat="true" layoutX="86.0" layoutY="131.0" prefHeight="25.0" prefWidth="213.0" promptText="Menu Name" />
+                        <JFXButton buttonType="RAISED" layoutX="70.0" layoutY="290.0" onAction="#MàdEmployee" prefHeight="38.0" prefWidth="273.0" style="-fx-background-color: #f95539;" text="MODIFY MENU" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="109.0" layoutY="37.0" prefHeight="54.0" prefWidth="196.0" text="Modify Menu">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="309.0" fitWidth="275.0" layoutX="506.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/tacos.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Supprimer+API">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #29c292;">
+               <children>
+                  <ListView fx:id="listview" layoutX="39.0" layoutY="34.0" prefHeight="421.0" prefWidth="291.0" />
+                  <JFXButton buttonType="RAISED" layoutX="453.0" layoutY="94.0" onAction="#TakeOrderScreen1" prefHeight="72.0" prefWidth="200.0" style="-fx-background-color: #f95539; -fx-background-radius: 34;" text="Make Promo Code" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Regular" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="453.0" layoutY="209.0" onAction="#deleteItem" prefHeight="72.0" prefWidth="200.0" style="-fx-background-color: #f95539; -fx-background-radius: 34;" text="Delete Item" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Regular" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="249.0" fitWidth="413.0" layoutX="490.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/restaurant-pickup.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

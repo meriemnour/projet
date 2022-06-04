@@ -1,0 +1,156 @@
+{% extends 'base_front_connecte.html.twig' %}
+
+{% block carousel %}
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Bienvenue {{ app.user.getNomU() }} {{ app.user.getPrenomU() }}</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Modifier votre profile chez Food-X</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+<div class="grix xs4 container">
+    {{ form_start(formEdit , {'attr':{'novalidate':'novalidate'}}) }}
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">CIN</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ form_widget(formEdit.cin_u) }}
+                    </div>
+                    <div style="color: red">
+                        {{ form_errors(formEdit.cin_u) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Nom</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ form_widget(formEdit.nom_u) }}
+                    </div>
+                    <div style="color: red">
+                        {{ form_errors(formEdit.nom_u) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Prenom</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ form_widget(formEdit.prenom_u) }}
+                    </div>
+                    <div style="color: red">
+                        {{ form_errors(formEdit.prenom_u) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Date naissance</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ form_widget(formEdit.date_naissance) }}
+                    </div>
+                    <div style="color: red">
+                        {{ form_errors(formEdit.date_naissance) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Numero telephone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ form_widget(formEdit.num_tel) }}
+                    </div>
+                    <div style="color: red">
+                        {{ form_errors(formEdit.num_tel) }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                style="height: 45px; padding: 10px 15px; background-color: #1c294e ">Editer</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{ form_end(formEdit) }}
+</div>
+    {# <table>
+        {{ form_start(formEdit , {'attr':{'novalidate':'novalidate'}}) }}
+
+        <tr>
+            <td>
+                <div class="pb-lg-2 pe-lg-0">
+                    {{ form_label(formEdit.cin_u,"Cin") }}
+                    {{ form_widget(formEdit.cin_u) }}
+                </div>
+            </td>
+            <td style="color:red;">
+                {{ form_errors(formEdit.cin_u) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div  class="pb-lg-2 pe-lg-0">
+                    {{ form_label(formEdit.nom_u,"Nom") }}
+                    {{ form_widget(formEdit.nom_u) }}
+                </div>
+            </td>
+            <td style="color:red;">
+                {{ form_errors(formEdit.nom_u) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pb-lg-2 pe-lg-0">
+                    {{ form_label(formEdit.prenom_u,"Prenom") }}
+                    {{ form_widget(formEdit.prenom_u) }}
+                </div>
+            </td>
+            <td style="color:red;">
+                {{ form_errors(formEdit.prenom_u) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pb-lg-2 pe-lg-0">
+                    {{ form_label(formEdit.date_naissance,"Date naissance") }}
+                    {{ form_widget(formEdit.date_naissance) }}
+                </div>
+            </td>
+            <td style="color:red;">
+                {{ form_errors(formEdit.date_naissance) }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="pb-lg-2 pe-lg-0">
+                    {{ form_label(formEdit.num_tel,"Numero Telephone") }}
+                    {{ form_widget(formEdit.num_tel) }}
+                </div>
+            </td>
+            <td style="color:red;">
+                {{ form_errors(formEdit.num_tel) }}
+            </td>
+        </tr>
+
+    </table>
+    <button type="submit" class="btn btn-success">Editer</button>
+
+    {{ form_end(formEdit) }}
+    #}
+{% endblock %}

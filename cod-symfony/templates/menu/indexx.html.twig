@@ -1,0 +1,218 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="feather-home"></i></div>
+                            Dashboard
+                        </a>
+                        <a class="nav-link" href="messages.html">
+                            <div class="sb-nav-link-icon"><i class="feather-message-square"></i></div>
+                            Messages
+                        </a>
+                        <a class="nav-link" href="bookings.html">
+                            <div class="sb-nav-link-icon"><i class="feather-calendar"></i></div>
+                            Bookings <span class="badge badge-pill ml-2 badge-primary">6 New</span>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayoutss" aria-expanded="false" aria-controls="collapseLayoutss">
+                            <div class="sb-nav-link-icon"><i class="feather-list"></i></div>
+                            My listings
+                            <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                        </a>
+                        <div class="collapse" id="collapseLayoutss" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="listings.html">Pending <span class="badge badge-pill ml-2 badge-primary">6</span></a>
+                                <a class="nav-link" href="listings.html">Active <span class="badge badge-pill ml-2 badge-success">5</span></a>
+                                <a class="nav-link" href="listings.html">Expired <span class="badge badge-pill ml-2 badge-danger">4</span></a>                                </nav>
+                        </div>
+
+
+
+
+                        <a class="nav-link" href="reviews.html">
+                            <div class="sb-nav-link-icon"><i class="feather-star"></i></div>
+                            Reviews
+                        </a>
+                        <a class="nav-link" href="bookmarks.html">
+                            <div class="sb-nav-link-icon"><i class="feather-heart"></i></div>
+                            Bookmarks
+                        </a>
+                        <a class="nav-link" href="{{ path('Add_Menu') }}">
+                            <div class="sb-nav-link-icon"><i class="feather-plus-circle"></i></div>
+                            Add listing
+                        </a>
+                        <a class="nav-link" href="{{ path('display_menu') }}">
+                            <div class="sb-nav-link-icon"><i class="feather-book-open"></i></div>
+                            Menu List
+                        </a>
+                        <a class="nav-link" href="orders.html">
+                            <div class="sb-nav-link-icon"><i class="feather-shopping-cart"></i></div>
+                            Orders Page
+                        </a>
+
+                        <a class="nav-link" href="edit-order.html">
+                            <div class="sb-nav-link-icon"><i class="feather-settings"></i></div>
+                            Edit Order
+                        </a>
+
+                        <a class="nav-link" href="my-profile.html">
+                            <div class="sb-nav-link-icon"><i class="feather-user"></i></div>
+                            My Profile
+                        </a>
+
+
+
+
+
+
+                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="feather-layout"></i></div>
+                            Layouts
+                            <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="feather-book"></i></div>
+                            Pages
+                            <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Authentication
+                                    <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="login.html">Login</a>
+                                        <a class="nav-link" href="register.html">Register</a>
+                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                    </nav>
+                                </div>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="401.html">401 Page</a>
+                                        <a class="nav-link" href="404.html">404 Page</a>
+                                        <a class="nav-link" href="500.html">500 Page</a>
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="sb-sidenav-menu-heading">Addons</div>
+                        <a class="nav-link" href="{{ path('stats') }}">
+                            <div class="sb-nav-link-icon"><i class="feather-pie-chart"></i></div>
+                            Charts
+                        </a>
+                        <a class="nav-link active" href="tables.html">
+                            <div class="sb-nav-link-icon"><i class="feather-grid"></i></div>
+                            Tables
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Ask Bootstrap
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Tables</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Tables</li>
+                    </ol>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                            <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                            .
+                        </div>
+                    </div>
+                    {% for message in app.flashes('info') %}
+                        <div class="alert alert-success" >
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('info2') %}
+                        <div class="alert alert-danger" >
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('info3') %}
+                        <div class="alert alert-warning" >
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <svg class="svg-inline--fa fa-table fa-w-16 mr-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z"></path></svg><!-- <i class="fas fa-table mr-1"></i> -->
+                            DataTable Example
+                        </div>
+                        <div class="card-body">
+                            <a class="btn btn-primary" href="{{ path('menulist') }}">More Options</a>
+
+                            <div class="table">
+                                <table class="table table-bordered dataTable" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                    <th>id</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Suppression</th>
+                                    <th>Modification</th>
+                                    </thead>
+                                    <tfoot>
+                                    </tfoot>
+                                    <tbody>
+                                    {% for menu in m %}
+                                        <tr>
+                                            <td>{{ menu.id }}</td>
+                                            <td>{{ menu.name }}</td>
+                                            <td>{{ menu.price }}</td>
+                                            <td>{{ menu.category }}</td>
+                                            <td>{{ menu.description }}</td>
+                                            <td>
+                                                <a class="btn btn-danger" href="{{ path('Remove_Menu',{'id':menu.id}) }}">Supprimer</a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" href="{{ path('Update_Menu',{'id':menu.id}) }}">Modifier</a>
+                                            </td>
+                                        </tr>
+
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <a class="btn btn-success" href="{{path('trie1') }}">Trier par prix</a>
+                            <a class="btn btn-success" href="{{path('trie2') }}">Trier par Id</a>
+                            <a class="btn btn-success" href="{{path('trie3') }}">Trier par Category</a>
+                            <span class="badge badge-sm bg-gradient"> <a href="{{ path('showpdf') }}">PDF</a></span>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>    </div>
+
+
+{% endblock %}

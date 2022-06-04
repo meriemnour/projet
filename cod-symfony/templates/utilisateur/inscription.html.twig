@@ -1,0 +1,180 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Food-X - Inscription{% endblock %}
+
+{% block carousel %}
+
+    {% for message in app.flashes('message') %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <!-- Quote Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container quote px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('FrontOffice/img/pizza.jpg') }}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                        {#  <div class="p-lg-5 pe-lg-0">
+                            <h1 class="display-5 mb-4">Inscription</h1>
+                        </div>#}
+
+                        <div class="p-lg-5 pe-lg-0">
+                            <div class="">
+                        <h4 class="mb-4 pb-2" style="color: #1c294e">Inscrivez-vous et bénéficiez d'un tas d'autres fonctionnalités</h4>
+                            </div>
+                    {{ form_start(formInscription , {'attr':{'novalidate':'novalidate'}}) }}
+                    <div class="col-md-auto">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">CIN</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.cin_u) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.cin_u) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Nom</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.nom_u) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.nom_u) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Prenom</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.prenom_u) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.prenom_u) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Date naissance</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.date_naissance) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.date_naissance) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Adresse Email</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.email_u) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.email_u) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Numero telephone</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.num_tel) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.num_tel) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Role</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.role) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.role) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Mot de passe</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.mot_de_passe) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.mot_de_passe) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Confirmer mot de passe</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.confirme_mot_de_passe) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.confirme_mot_de_passe) }}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Captcha</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{ form_widget(formInscription.captcha) }}
+                                    </div>
+                                    <div style="color: red">
+                                        {{ form_errors(formInscription.captcha) }}
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                            style="height: 45px; padding: 10px 15px; background-color: #1c294e ">Inscription</button>
+                                </div>
+                            </div>
+                    {{ form_end(formInscription) }}
+
+
+
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+{% endblock %}

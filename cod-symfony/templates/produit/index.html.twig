@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitController!{% endblock %}
+
+{% block body %}
+    <div class="row">            {% set foo = 0 %}
+
+        {% for menu in m %}
+            {% if (  menu.category=='Fast foods' ) %}
+                {% set foo = foo + 1 %}
+            {% endif %}
+        {% endfor %}
+        <h5 class="mb-4 mt-3 col-md-12">Fast Foods <small class="h6 text-black-50">  {{foo}}</small></h5>
+        <div class="col-md-12">
+            <div class="bg-white rounded border shadow-sm mb-4">
+                {% for menu in m %}
+                    {% if (  menu.category=='Fast foods' ) %}
+                <div class="gold-members p-3 border-bottom">
+                    <a href="{{ path('cart_add',{'id':menu.id}) }}" class="btn btn-outline-secondary btn-sm  float-right" >ADD</a>
+                    <div class="media">
+                        <div class="mr-3"><i class="icofont-ui-press text-danger food-item"></i></div>
+                        <div class="media-body">
+                            <h6 class="mb-1">{{ menu.name}}</h6>
+                            <p class="text-gray mb-0">{{ menu.price }}DT</p>
+                        </div>
+                    </div>
+                </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>{% set doo = 0 %}
+
+    {% for menu in m %}
+        {% if (  menu.category=='Starters' ) %}
+            {% set doo = doo + 1 %}
+        {% endif %}
+    {% endfor %}
+    <div class="row">
+        <h5 class="mb-4 mt-3 col-md-12">Starters <small class="h6 text-black-50">{{ doo }}</small></h5>
+        <div class="col-md-12">
+            <div class="bg-white rounded border shadow-sm mb-4">
+                {% for menu in m %}
+                    {% if (  menu.category=='Starters' ) %}
+                        <div class="gold-members p-3 border-bottom">
+                            <a href="{{ path('cart_add',{'id':menu.id}) }}" class="btn btn-outline-secondary btn-sm  float-right" >ADD</a>
+                            <div class="media">
+                                <div class="mr-3"><i class="icofont-ui-press text-danger food-item"></i></div>
+                                <div class="media-body">
+                                    <h6 class="mb-1">{{ menu.name}}</h6>
+                                    <p class="text-gray mb-0">{{ menu.price }}DT</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    {% set soo = 0 %}
+    {% for menu in m %}
+        {% if (  menu.category=='Vegetarian' ) %}
+            {% set soo = soo + 1 %}
+        {% endif %}
+    {% endfor %}
+    <div class="row">
+        <h5 class="mb-4 mt-3 col-md-12">Vegetarian <small class="h6 text-black-50">{{ soo }}</small></h5>
+        <div class="col-md-12">
+            <div class="bg-white rounded border shadow-sm mb-4">
+                {% for menu in m %}
+                    {% if (  menu.category=='Vegetarian' ) %}
+                        <div class="gold-members p-3 border-bottom">
+                            <a href="{{ path('cart_add',{'id':menu.id}) }}" class="btn btn-outline-secondary btn-sm  float-right" >ADD</a>
+                            <div class="media">
+                                <div class="mr-3"><i class="icofont-ui-press text-danger food-item"></i></div>
+                                <div class="media-body">
+                                    <h6 class="mb-1">{{ menu.name}}</h6>
+                                    <p class="text-gray mb-0">{{ menu.price }}DT</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

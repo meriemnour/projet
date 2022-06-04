@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        <!-- Bootstrap core CSS-->
+        <link href="/Front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome-->
+        <link href="/Front/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+        <!-- Font Awesome-->
+        <link href="/Front/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <!-- Select2 CSS-->
+        <link href="/Front/vendor/select2/css/select2.min.css" rel="stylesheet">
+        <!-- Custom styles for this template-->
+        <link href="/Front/css/osahan.css" rel="stylesheet">
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous">
+    {% endblock %}
+
+    {% block javascripts %}
+        <!-- jQuery -->
+        <script src="/Front/vendor/jquery/jquery-3.3.1.slim.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="/Front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Select2 JavaScript-->
+        <script src="/Front/endor/select2/js/select2.min.js"></script>
+        <!-- Owl Carousel -->
+        <script src="/Front/vendor/owl-carousel/owl.carousel.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="/Front/js/custom.js"></script>
+    {% endblock %}
+</head>
+<body>
+{% block header %}<<nav class="navbar navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img alt="logo" src="img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="offers.html"><i class="icofont-sale-discount"></i> Offers <span class="badge badge-danger">New</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Restaurants
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
+                        <a class="dropdown-item" href="{{ path('app_produit') }}">Listing</a>
+                        <a class="dropdown-item" href="{{ path('app_cart') }}">Detail + Cart</a>
+                        <a class="dropdown-item" href="{{ path('logout') }}">Deconnexion</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
+                        <a class="dropdown-item" href="track-order.html">Track Order</a>
+                        <a class="dropdown-item" href="invoice.html">Invoice</a>
+                        <a class="dropdown-item" href="login.html">Login</a>
+                        <a class="dropdown-item" href="register.html">Register</a>
+                        <a class="dropdown-item" href="404.html">404</a>
+                        <a class="dropdown-item" href="extra.html">Extra :)</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img alt="Generic placeholder image" src="img/user/4.png" class="nav-osahan-pic rounded-pill"> My Account
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
+                        <a class="dropdown-item" href="orders.html#orders"><i class="icofont-food-cart"></i> Orders</a>
+                        <a class="dropdown-item" href="orders.html#offers"><i class="icofont-sale-discount"></i> Offers</a>
+                        <a class="dropdown-item" href="orders.html#favourites"><i class="icofont-heart"></i> Favourites</a>
+                        <a class="dropdown-item" href="orders.html#payments"><i class="icofont-credit-card"></i> Payments</a>
+                        <a class="dropdown-item" href="orders.html#addresses"><i class="icofont-location-pin"></i> Addresses</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+{% block body %}{% endblock %}
+{% block footer %}<footer class="pt-4 pb-4 text-center">
+    <div class="container">
+        <p class="mt-0 mb-0">© Copyright 2020 Osahan Eat. All Rights Reserved</p>
+        <small class="mt-0 mb-0"> Made with <i class="fas fa-heart heart-icon text-danger"></i> by
+            <a class="text-danger" target="_blank" href="https://www.instagram.com/iamgurdeeposahan/">Gurdeep Osahan</a> - <a class="text-primary" target="_blank" href="https://askbootstrap.com/">Ask Bootstrap</a>
+        </small>
+    </div>
+</footer>{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+{% extends 'baseadmin.html.twig' %}
+{% block body %}
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="feather-home"></i></div>
+                            Dashboard
+                        </a>
+                        <a class="nav-link" href="messages.html">
+                            <div class="sb-nav-link-icon"><i class="feather-message-square"></i></div>
+                            Messages
+                        </a>
+                        <a class="nav-link" href="bookings.html">
+                            <div class="sb-nav-link-icon"><i class="feather-calendar"></i></div>
+                            Bookings <span class="badge badge-pill ml-2 badge-primary">6 New</span>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayoutss" aria-expanded="false" aria-controls="collapseLayoutss">
+                            <div class="sb-nav-link-icon"><i class="feather-list"></i></div>
+                            My listings
+                            <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                        </a>
+                        <div class="collapse" id="collapseLayoutss" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="listings.html">Pending <span class="badge badge-pill ml-2 badge-primary">6</span></a>
+                                <a class="nav-link" href="listings.html">Active <span class="badge badge-pill ml-2 badge-success">5</span></a>
+                                <a class="nav-link" href="listings.html">Expired <span class="badge badge-pill ml-2 badge-danger">4</span></a>
+                            </nav>
+                        </div>
+                        <a class="nav-link" href="reviews.html">
+                            <div class="sb-nav-link-icon"><i class="feather-star"></i></div>
+                            Reviews
+                        </a>
+                        <a class="nav-link" href="bookmarks.html">
+                            <div class="sb-nav-link-icon"><i class="feather-heart"></i></div>
+                            Bookmarks
+                        </a>
+                        <a class="nav-link" href="add-listing.html">
+                            <div class="sb-nav-link-icon"><i class="feather-plus-circle"></i></div>
+                            Add listing
+                        </a>
+                        <a class="nav-link active" href="add-listing-with-menu-list.html">
+                            <div class="sb-nav-link-icon"><i class="feather-book-open"></i></div>
+                            Menu List
+                        </a>
+                        <a class="nav-link" href="orders.html">
+                            <div class="sb-nav-link-icon"><i class="feather-shopping-cart"></i></div>
+                            Orders Page
+                        </a>
+                        <a class="nav-link" href="edit-order.html">
+                            <div class="sb-nav-link-icon"><i class="feather-settings"></i></div>
+                            Edit Order
+                        </a>
+                        <a class="nav-link" href="my-profile.html">
+                            <div class="sb-nav-link-icon"><i class="feather-user"></i></div>
+                            My Profile
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="feather-layout"></i></div>
+                            Layouts
+                            <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="feather-book"></i></div>
+                            Pages
+                            <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Authentication
+                                    <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="login.html">Login</a>
+                                        <a class="nav-link" href="register.html">Register</a>
+                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                    </nav>
+                                </div>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><svg class="svg-inline--fa fa-angle-down fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down"></i> --></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="401.html">401 Page</a>
+                                        <a class="nav-link" href="404.html">404 Page</a>
+                                        <a class="nav-link" href="500.html">500 Page</a>
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="sb-sidenav-menu-heading">Addons</div>
+                        <a class="nav-link" href="charts.html">
+                            <div class="sb-nav-link-icon"><i class="feather-pie-chart"></i></div>
+                            Charts
+                        </a>
+                        <a class="nav-link" href="tables.html">
+                            <div class="sb-nav-link-icon"><i class="feather-grid"></i></div>
+                            Tables
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Ask Bootstrap
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Modify Menu list</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Modify Menu list</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    Modify Item From Menu List
+                                </div>
+                                <div class="card-body">
+                                    <!-- /box_general-->
+                                    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+                                    <div class="box_general padding_bottom">
+                                        <div class="wrapper_indent">
+                                            <div class="form-group">
+                                                <label>Menu Category</label>
+                                                {{form_widget(form.category,{'attr':{'class': 'form-control'  }} )}}
+                                            </div>
+                                            {{ form_errors(form.category,{'attr':{'class':'text-danger'}}) }}
+
+                                            <div class="strip_menu_items">
+                                                <div class="row">
+                                                    <div class="col-xl-9">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <label>Menu Name</label>
+                                                                    {{form_widget(form.name,{'attr':{'class': 'form-control'  }} )}}
+                                                                </div>
+                                                                {{ form_errors(form.name,{'attr':{'class':'text-danger'}}) }}
+
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Price</label>
+                                                                    {{form_widget(form.price,{'attr':{'class': 'form-control'  }} )}}
+                                                                </div>
+                                                                {{ form_errors(form.price,{'attr':{'class':'text-danger'}}) }}
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Short description</label>
+                                                            {{form_widget(form.description,{'attr':{'class': 'form-control'  }} )}}
+                                                        </div>
+                                                        {{ form_errors(form.description,{'attr':{'class':'text-danger'}}) }}
+
+                                                        <!-- End form-group -->
+                                                    </div>
+                                                    <!-- End row -->
+                                                </div>
+                                                <!-- End strip_menu_items -->
+                                            </div>
+                                            <!-- /box_general-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right mb-4">
+                                {{form_widget(form.Submit,{'attr':{'class': 'btn btn-success'  }} )}}
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div></div></main>
+        </div>
+    </div>
+{% endblock %}

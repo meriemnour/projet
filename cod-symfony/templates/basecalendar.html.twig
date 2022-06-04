@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.css" integrity="sha256-16PDMvytZTH9heHu9KBPjzrFTaoner60bnABykjNiM0=" crossorigin="anonymous">    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.js" integrity="sha256-PL1mKrYeZkM5SsJ5nydN6463HLkV918bgDdYL0I5Z+k=" crossorigin="anonymous"></script>{% block javascripts %}{% endblock %}
+</body>
+</html>s

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Livraison</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nom_livraison</th>
+        <th>Date</th>
+        <th>Destination</th>
+        <th>actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for livraison in livraisons %}
+        <tr>
+            <td>{{ livraison.id }}</td>
+            <td>{{ livraison.nomLivraison }}</td>
+            <td>{{ livraison.date }}</td>
+            <td>{{ livraison.destination }}</td>
+            <td>
+                <a href="{{ path('app_livraison_show', {'id': livraison.id}) }}">show</a>
+                <a href="{{ path('app_livraison_edit', {'id': livraison.id}) }}">edit</a>
+            </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="5">no records found</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
+
+

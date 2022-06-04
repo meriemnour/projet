@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.FXMLGSTUserController">
+   <children>
+      <TextField fx:id="tfnom" layoutX="38.0" layoutY="65.0" promptText="Nom" />
+      <TextField fx:id="tfprenom" layoutX="38.0" layoutY="122.0" promptText="Prenom" />
+      <TextField fx:id="tfusername" layoutX="38.0" layoutY="161.0" promptText="Username" />
+      <TextField fx:id="tfemail" layoutX="38.0" layoutY="201.0" promptText="Email" />
+      <PasswordField fx:id="pfpassword" layoutX="38.0" layoutY="240.0" promptText="Password" />
+      <TextField fx:id="tfaddress" layoutX="39.0" layoutY="285.0" promptText="Address" />
+      <TextField fx:id="tfnumtel" layoutX="38.0" layoutY="327.0" promptText="Numero" />
+      <ComboBox fx:id="comborole" layoutX="38.0" layoutY="368.0" prefWidth="150.0" promptText="Role" />
+      <DatePicker fx:id="dpdate" layoutX="38.0" layoutY="418.0" promptText="Date de naissance" />
+      <ListView fx:id="listviewuser" layoutX="223.0" layoutY="75.0" onMouseClicked="#fillforum" prefHeight="394.0" prefWidth="740.0" />
+      <Button layoutX="300.0" layoutY="496.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="467.0" layoutY="496.0" mnemonicParsing="false" onAction="#modifier" text="Modifier">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="669.0" layoutY="502.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfrecherche" layoutX="318.0" layoutY="24.0" promptText="Recherche" />
+      <CheckBox fx:id="checkboxapp" layoutX="50.0" layoutY="479.0" mnemonicParsing="false" text="Approve access" />
+   </children>
+</AnchorPane>

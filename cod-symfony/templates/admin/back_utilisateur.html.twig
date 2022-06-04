@@ -1,0 +1,207 @@
+{% extends 'base_back.html.twig' %}
+{% block title %}Food-X - Utilisateurs {% endblock %}
+
+{% block body%}
+    {% for message in app.flashes('message') %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Utilisateurs</h1>
+        <!-- Basic Card Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Gestion des Utilisateurs</h6>
+            </div>
+            <div class="card-body">
+                <table>
+                    <td style="  vertical-align:top ; ">
+                        <table style="margin-right: 20px ; ">
+                            <form action="" method="POST">
+
+                                <th>Trier par :  </th>
+                                <th><a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                       style="height: 35px; padding: 6px 15px; " href="{{ path('triNom') }}">Nom Utilisateur</a></th>
+                                <th><a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                       style="height: 35px; padding: 6px 15px; " href="{{ path('triDateNaissance') }}">Date naissance</a></th>
+                                </form>
+                        </table>
+                    </td>
+
+                    <table style="margin-right: 20px ; ">
+
+                    </table>
+                    <hr>
+                    </tr>
+                    <td>
+                        <table style="vertical-align:top ; ">
+                            <br>
+
+                            <tr>
+                                <th><a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                       style="height: 45px; padding: 10px 15px; "
+                                       href="{{ path('addU_back') }}">Ajouter un Utilisateur</a></th>
+                               </th>
+                            </tr>
+
+                        </table>
+                    </td>
+                    <hr>
+                    <td>
+                        <div style="width: 100%; overflow: auto">
+                            <table style="border:1px solid black;border-collapse:collapse; vertical-align:center;  ">
+                                <tr class="table" style="border:1px solid black;border-collapse:collapse;">
+                                    <td class="table">Cin Utilisateur</td>
+                                    <td class="table">Nom Utilisateur</td>
+                                    <td class="table">Prenom Utilisateur</td>
+                                    <td class="table">Date naissance Utilisateur</td>
+                                    <td class="table">Email Utilisateur</td>
+                                    <td class="table">Numero Telephone Utilisateur</td>
+                                    <td class="table">Role Utilisateur</td>
+                                </tr>
+                                {% for k in formU %}
+                                <tr style="border:1px solid black;border-collapse:collapse; vertical-align:center; text-align:center;">
+                                    <td style="font-size: 15px;">{{ k.getCinU() }}</td>
+                                    <td style="font-size: 15px;">{{ k.getNomU() }}</td>
+                                    <td style="font-size: 15px;">{{ k.getPrenomU }}</td>
+                                    <td style="font-size: 15px;">{{ k.getDateNaissance |date('d-m-Y') }}</td>
+                                    <td style="font-size: 15px;">{{ k.getEmailU }}</td>
+                                    <td style="font-size: 15px;">{{ k.getNumTel }}</td>
+                                    <td style="font-size: 15px;">
+                                        {% for role in k.roles %}
+                                            {% if role == "ROLE_USER"%}
+                                                Client
+                                            {% elseif role == "ROLE_EMPLOYEE" %}
+                                                Employee
+                                            {% elseif role == "ROLE_ADMIN" %}
+                                                Administrateur
+                                            {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                     <td>
+                                        <form action="{{ path('supprimer',{'id':k.getId()})}}">
+                                            <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                                    style="height: 35px; padding: 6px 15px; "> Delete</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="{{ path('modifier',{'id':k.getId()})}}">
+                                            <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                                    style="height: 35px; padding: 6px 15px; "> Edit</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="{{ path('bloquer',{'id':k.getId()}) }}">
+                                            <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                                    style="height: 35px; padding: 6px 15px; "> Bloquer</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="{{ path('debloquer',{'id':k.getId()}) }}">
+                                            <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                                    style="height: 35px; padding: 6px 15px; "> Déloquer</button>
+                                        </form>
+                                    </td>
+{#
+                                    <td>
+                                        <form action="{{ path('modifierU_Back',{'id':k.getId()}) }}">
+                                            <button style="border-color: #ffc650; background-color: #ffc650"><i class='fas fa-edit' style='font-size:20px color: white'></i></button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="{{ path('supprimer_uBack',{'id':k.getId()}) }}">
+                                            <button style="border-color: red; background-color: red"><i class='fas fa-trash' style='font-size:18px; color: white'></i></button>
+                                        </form>
+                                    </td>#}
+                                    {% endfor %}
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{#
+
+
+
+
+
+
+{% block body %}
+    {% for message in app.flashes('message') %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <table border="2">
+        <tr>
+            <td>CIN : </td>
+            <td>Nom :</td>
+            <td>Prenom : </td>
+            <td>Date de naissance : </td>
+            <td>Email : </td>
+            <td>Numero de telephone : </td>
+            <td>Role : </td>
+            <td>Action : </td>
+            <td>Action2 : </td>
+        </tr>
+
+        {% for k in formU %}
+            <tr>
+                <td>{{ k.getCinU() }}</td>
+                <td>{{ k.getNomU() }}</td>
+                <td>{{ k.getPrenomU }}</td>
+                <td>{{ k.getDateNaissance |date('d-m-Y') }}</td>
+                <td>{{ k.getEmailU }}</td>
+                <td>{{ k.getNumTel }}</td>
+
+                <td>
+                    {% for role in k.roles %}
+                        {% if role == "ROLE_USER"%}
+                            Client
+                        {% elseif role == "ROLE_EMPLOYEE" %}
+                            Employee
+                        {% elseif role == "ROLE_ADMIN" %}
+                            Administrateur
+                        {% endif %}
+                    {% endfor %}
+                </td>
+
+                <td><form action ="{{path('supprimer_uBack',{'id':k.getId()})}}">
+                        <button>Supprimer</button>
+                    </form></td>
+
+                <td><form action ="{{path('modifierU_Back',{'id':k.getId()})}}">
+                        <button>Modifer</button>
+                    </form></td>
+            </tr>
+        {% endfor %}
+
+        <td><form action ="{{path('addU_back')}}">
+                <button>Ajouter</button>
+            </form></td>
+    </table>
+
+{% endblock %}
+#}

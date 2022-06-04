@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorePane" prefHeight="732.0" prefWidth="1058.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.AjouterBonPlanController">
+   <children>
+      <ImageView fitHeight="732.0" fitWidth="1085.0" layoutX="-3.0" opacity="0.86" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/restaurant-le-47.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfrefcompte" layoutX="73.0" layoutY="84.0" opacity="0.88" promptText="ref_compte" />
+      <TextField fx:id="tfrefcategorie" layoutX="73.0" layoutY="144.0" opacity="0.88" promptText="refcategorie" />
+      <ComboBox fx:id="comborestaurant" layoutX="73.0" layoutY="210.0" opacity="0.88" prefWidth="150.0" promptText="restaurant" />
+      <TextField fx:id="tflibellle" layoutX="73.0" layoutY="276.0" opacity="0.88" promptText="libelle" />
+      <TextField fx:id="tfdescription" layoutX="74.0" layoutY="338.0" opacity="0.88" promptText="description" />
+      <TextField fx:id="tfprix" layoutX="74.0" layoutY="404.0" opacity="0.88" promptText="prix" />
+      <DatePicker fx:id="dpouverture" layoutX="67.0" layoutY="470.0" opacity="0.88" promptText="ouverture" />
+      <DatePicker fx:id="dpfermuture" layoutX="67.0" layoutY="533.0" opacity="0.88" promptText="fermuture" />
+      <TextField fx:id="tfrecherche" layoutX="587.0" layoutY="35.0" opacity="0.88" promptText="Recherche" />
+      <ListView fx:id="listviewbonplan" layoutX="305.0" layoutY="84.0" onMouseClicked="#fillforum" opacity="0.88" prefHeight="542.0" prefWidth="759.0" />
+      <Button layoutX="135.0" layoutY="662.0" mnemonicParsing="false" onAction="#Ajouter" opacity="0.88" style="-fx-background-color: #0398fc;" text="Ajouter">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="463.0" layoutY="662.0" mnemonicParsing="false" onAction="#modifier" opacity="0.88" style="-fx-background-color: #0398fc;" text="Modifier">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="743.0" layoutY="662.0" mnemonicParsing="false" onAction="#supprimer" opacity="0.88" style="-fx-background-color: #0398fc;" text="Supprimer">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextField fx:id="tfimage" layoutX="73.0" layoutY="601.0" opacity="0.88" promptText="image" />
+      <Button layoutX="234.0" layoutY="601.0" mnemonicParsing="false" onAction="#upload" opacity="0.88" text="Upload" />
+   </children>
+</AnchorPane>

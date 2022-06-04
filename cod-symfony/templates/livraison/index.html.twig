@@ -1,0 +1,48 @@
+{% extends 'baseadmin1.html.twig' %}
+
+{% block title %}Livraison index{% endblock %}
+
+{% block body %}
+    <h1>Livraison index</h1>
+
+    {% for message in app.flashes('info') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <button>    <a href="app_pdf_download">PDF</a></button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom_livraison</th>
+                <th>Date</th>
+                <th>Destination</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for livraison in livraisons %}
+            <tr>
+                <td>{{ livraison.id }}</td>
+                <td>{{ livraison.nomLivraison }}</td>
+                <td>{{ livraison.date }}</td>
+                <td>{{ livraison.destination }}</td>
+                <td>
+                    <a href="{{ path('app_livraison_show', {'id': livraison.id}) }}">show</a>
+                    <a href="{{ path('app_livraison_edit', {'id': livraison.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_livraison_new') }}">Create new</a>
+    {{ knp_pagination_render(livraisons) }}
+{% endblock %}

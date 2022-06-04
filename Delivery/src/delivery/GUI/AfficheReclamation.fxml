@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" onMousePressed="#selectedreclamation" prefHeight="233.0" prefWidth="430.0" style="-fx-background-color: #0398fc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.AfficheReclamationController">
+   <children>
+      <Text layoutX="58.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Objet" />
+      <Text layoutX="59.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+      <Text layoutX="57.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date creation" />
+      <Label fx:id="lobjet" layoutX="206.0" layoutY="19.0" />
+      <Label fx:id="ldescription" layoutX="206.0" layoutY="87.0" />
+      <Label fx:id="ldate" layoutX="206.0" layoutY="160.0" />
+      <Label fx:id="lstatus" layoutX="187.0" layoutY="193.0" />
+      <Text layoutX="57.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+{% extends 'base_front_connecte.html.twig' %}
+
+{% block carousel %}
+
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Bienvenue {{ app.user.getNomU() }} {{ app.user.getPrenomU() }}</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Modifier votre mot de passe chez Food-X</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="grix xs4 container">
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <div>
+
+            <form method="post">
+                <div class="form-field">
+                    <h6 for="pass1">Mot de passe</h6>
+                    <input type="password" id="pass1" name="pass1" class="form-control">
+                </div>
+                <div class="form-field">
+                    <h6 for="pass2">Confirmer mot de passe</h6>
+                    <input type="password" id="pass2" name="pass2" class="form-control">
+                </div>
+
+                    <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                            style="height: 45px; padding: 10px 15px; background-color: #1c294e ">Valider</button>
+
+
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

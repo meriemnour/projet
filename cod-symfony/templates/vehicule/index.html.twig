@@ -1,0 +1,43 @@
+{% extends 'baseadmin1.html.twig' %}
+
+{% block title %}Vehicule index{% endblock %}
+
+{% block body %}
+    <h1>Vehicule index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type_vehicule</th>
+                <th>Num_chassis</th>
+                <th>Num_immatriculation</th>
+                <th>Nom_livraison</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vehicule in vehicules %}
+            <tr>
+                <td>{{ vehicule.id }}</td>
+                <td>{{ vehicule.typeVehicule }}</td>
+                <td>{{ vehicule.numChassis }}</td>
+                <td>{{ vehicule.numImmatriculation }}</td>
+
+                <td>
+                    <a href="{{ path('app_vehicule_show', {'id': vehicule.id}) }}">show</a>
+                    <a href="{{ path('app_vehicule_edit', {'id': vehicule.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_vehicule_new') }}">Create new</a>
+    {{ knp_pagination_render(vehicules) }}
+
+{% endblock %}

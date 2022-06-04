@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" layoutX="800.0" layoutY="600.0" prefHeight="11.0" prefWidth="320.0" style="-fx-background-color: #324ea8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.VehiculeDocumentController">
+   <children>
+      <VBox layoutX="-764.0" layoutY="-511.0" prefHeight="149.0" prefWidth="156.0" spacing="17.0">
+         <children>
+            <Label text="Id_véhicule">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="type_véhicule" />
+            <Label text="num_chassis" />
+            <Label prefHeight="17.0" prefWidth="115.0" text="num_immatriculation" />
+         </children></VBox>
+      <VBox layoutX="-621.0" layoutY="-511.0" prefHeight="159.0" prefWidth="212.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfId" />
+            <TextField fx:id="tfType" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfNum" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfImmat" layoutX="10.0" layoutY="60.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvVehicule" layoutX="-338.0" layoutY="-537.0" onMouseClicked="#handleMouseAction" prefHeight="249.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="id_vehicule" />
+          <TableColumn fx:id="colType" prefWidth="130.0" text="type_vehicule" />
+            <TableColumn fx:id="colNum" prefWidth="92.0" text="num_chassis" />
+            <TableColumn fx:id="colImmat" prefWidth="132.0" text="num_immatriculation" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="-738.0" layoutY="-78.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="95.0" text="Add" />
+      <Button fx:id="btnUpdate" layoutX="-626.0" layoutY="-78.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="95.0" text="Update" />
+      <Button fx:id="btnDelete" layoutX="-515.0" layoutY="-78.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="95.0" text="Delete" />
+      <ListView fx:id="listview" layoutX="-743.0" layoutY="-340.0" prefHeight="200.0" prefWidth="347.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CartController!{% endblock %}
+
+{% block body %}
+    {% if items | length > 0 %}
+    <table class="table">
+        <thead>
+        <tr>
+        <th>Menu</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+            <th>Supprimer</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.menu.name }}</td>
+                <td>{{ item.menu.price }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.quantity * item.menu.price}}</td>
+                <td>
+                    <a href="{{ path('cart_remove' , {'id': item.menu.id}) }}" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+<tfoot>
+<tr>
+    <td  class="text-right" colspan="3">Total :</td>
+    <td >{{ total }}</td>
+</tr>
+</tfoot>
+    </table>
+
+            <a href="{{ path('create_Inorderr') }}"class="btn btn-success btn-block btn-lg" >Pay {{ total }}DT
+            <i class="icofont-long-arrow-right"></i></a>
+    {% else %}
+
+    <p>Surprise C'est Vide</p>
+
+{% endif %}
+
+
+
+{% endblock %}

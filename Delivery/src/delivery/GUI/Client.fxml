@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="672.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.ClientController">
+   <children>
+      <ImageView fitHeight="692.0" fitWidth="1009.0" layoutY="7.0" opacity="0.89" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/693086-photos-mohamed-cheikh-top-chef-2021-a-la-pagode-de-cos-de-la-reserve.jpg" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="14.0" layoutY="48.0" opacity="0.89" prefHeight="504.0" prefWidth="575.0">
+         <content>
+            <GridPane fx:id="grid">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="tfobjet" layoutX="709.0" layoutY="137.0" opacity="0.89" prefHeight="25.0" prefWidth="200.0" promptText="objet" />
+      <TextArea fx:id="tfdescription" layoutX="709.0" layoutY="206.0" opacity="0.89" prefHeight="200.0" prefWidth="200.0" promptText="description" />
+      <Button layoutX="768.0" layoutY="450.0" mnemonicParsing="false" onAction="#reclamation" opacity="0.89" style="-fx-background-color: #0398fc;" text="Reclamation" />
+      <Button layoutX="276.0" layoutY="572.0" mnemonicParsing="false" onAction="#like" opacity="0.89" style="-fx-background-color: #0398fc;" text="Like" />
+      <Label fx:id="idgetter" layoutX="618.0" layoutY="82.0" />
+   </children>
+</AnchorPane>

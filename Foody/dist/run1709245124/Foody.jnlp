@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Foody.jnlp">
+  <information>
+    <title>Foody</title>
+    <vendor>Winston</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Foody.jar" size="5381679" download="eager" />
+    <jar href="lib\TrayNotification.jar" size="41019" download="eager" />
+    <jar href="lib\barcode.jar" size="259748" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\java-mail-1.4.4.jar" size="494975" download="eager" />
+    <jar href="lib\jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\qrgen-1.0.jar" size="4932" download="eager" />
+    <jar href="lib\twilio-7.14.5.jar" size="2310539" download="eager" />
+    <jar href="lib\twilio-8.9.0-jar-with-dependencies.jar" size="8358946" download="eager" />
+    <jar href="lib\twilio-8.9.0.jar" size="4206744" download="eager" />
+    <jar href="lib\zxing-core-1.7.jar" size="352719" download="eager" />
+    <jar href="lib\zxing-j2se-1.7.jar" size="22051" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Foody" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="foody.Foody"  name="Foody" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,102 @@
+{% extends 'base_front_connecte.html.twig' %}
+
+{% block carousel %}
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Bienvenue {{ app.user.getNomU() }} {{ app.user.getPrenomU() }}</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Consulter votre profile chez Food-X</a></li>
+                    </ol>
+            </nav>
+        </div>
+    </div>
+
+<div class="grix xs4 container">
+    {% for message in app.flashes('message') %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">CIN</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ app.user.getCinU() }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Nom</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ app.user.getNomU() }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Prenom</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ app.user.getPrenomU() }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Date naissance</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ app.user.getDateNaissance() |date('d-m-Y') }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ app.user.getEmailU() }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Numero telephone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ app.user.getNumTel() }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Role</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ app.user.getRole() }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                           style="height: 45px; padding: 10px 15px; background-color: #1c294e " href="{{ path('editProfile') }}">Editer Profile</a>
+                        <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                           style="height: 45px; padding: 10px 15px; background-color: #1c294e " href="{{ path('editPass') }}">Changer mot de passe</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+{% endblock %}

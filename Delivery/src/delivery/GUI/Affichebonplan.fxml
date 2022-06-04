@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" onMousePressed="#selectedbp" prefHeight="293.0" prefWidth="492.0" style="-fx-background-color: #0398fc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.AffichebonplanController">
+   <children>
+      <Label fx:id="llibelle" layoutX="166.0" layoutY="50.0" />
+      <Label fx:id="ldescription" layoutX="173.0" layoutY="106.0" />
+      <Label fx:id="lprix" layoutX="173.0" layoutY="155.0" />
+      <Label fx:id="ldateouv" layoutX="173.0" layoutY="205.0" />
+      <Label fx:id="ldatefermuture" layoutX="173.0" layoutY="250.0" />
+      <Text layoutX="44.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Libelle" />
+      <Text layoutX="50.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+      <Text layoutX="50.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" />
+      <Text layoutX="49.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date ouverture" />
+      <Text layoutX="50.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date fermuture" />
+      <Label fx:id="lreact" layoutX="364.0" layoutY="259.0" />
+      <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="200.0" layoutX="258.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

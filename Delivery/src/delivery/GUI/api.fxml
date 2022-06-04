@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivery.GUI.ApiController">
+   <children>
+      <JFXButton layoutX="347.0" layoutY="170.0" onAction="#btn1" text="Write Qr Code" />
+      <JFXTextField fx:id="qrtext" layoutX="102.0" layoutY="163.0" />
+   </children>
+</AnchorPane>

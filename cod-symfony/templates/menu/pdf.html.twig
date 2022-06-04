@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h2 style="text-align:center">Liste Des Repas</h2>
+<style>
+    table {
+        border-collapse:collapse;
+        width:90%;
+
+    }
+    th, td {
+        border:1px solid darkred;
+        width:60%;
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+
+        font-family: sans-serif;
+    }
+    h2{
+        color: red;
+        font-family: "Goudy Bookletter 1911", sans-serif;
+
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    td {
+        text-align:center;
+        color: palevioletred;
+        font-weight:  bold;
+        font-family: cursive;
+    }
+    caption {
+        font-weight:bold
+    }
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<table class="table">
+    <thead>
+    <tr>
+
+        <th>id </th>
+        <th>Menu Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Description</th>
+
+
+
+    </tr>
+    </thead>
+
+    <tr>
+        {% for menu in m %}
+    <tr>
+        <td>{{ menu.id }}</td>
+        <td>{{ menu.name }}</td>
+        <td>{{ menu.price }}</td>
+        <td>{{ menu.category }}</td>
+        <td>{{ menu.description }}</td>
+
+
+    </tr>
+        {% endfor %}
+</table>
+
+</body>
+</html>
+
+
+
